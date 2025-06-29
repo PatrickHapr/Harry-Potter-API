@@ -83,7 +83,7 @@ class SearchCharacterActivity : AppCompatActivity() {
         val spinnerItems = mutableListOf("Selecione um personagem...")
         spinnerItems.addAll(characters.map { character ->
             if (character.name.isNotEmpty()) {
-                "${character.name} (${character.house.ifEmpty { "Sem casa" }})"
+                character.name
             } else {
                 "Personagem sem nome"
             }
