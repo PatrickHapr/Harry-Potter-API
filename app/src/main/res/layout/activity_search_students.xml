@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estudantes por Casa"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecione uma casa:"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <RadioGroup
+        android:id="@+id/rgHouses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/rbGryffindor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grifinória"
+            android:textSize="16sp"
+            android:layout_margin="4dp" />
+
+        <RadioButton
+            android:id="@+id/rbSlytherin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sonserina"
+            android:textSize="16sp"
+            android:layout_margin="4dp" />
+
+        <RadioButton
+            android:id="@+id/rbHufflepuff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lufa-Lufa"
+            android:textSize="16sp"
+            android:layout_margin="4dp" />
+
+        <RadioButton
+            android:id="@+id/rbRavenclaw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Corvinal"
+            android:textSize="16sp"
+            android:layout_margin="4dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar Estudantes"
+        android:onClick="searchStudents" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_margin="16dp" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_margin="16dp" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:onClick="goBack"/>
+
+</LinearLayout>
