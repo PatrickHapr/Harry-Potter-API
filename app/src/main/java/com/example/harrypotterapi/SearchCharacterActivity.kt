@@ -79,13 +79,12 @@ class SearchCharacterActivity : AppCompatActivity() {
     }
 
     private fun setupSpinner() {
-        // Cria lista com "Selecione..." + nomes dos personagens
         val spinnerItems = mutableListOf("Selecione um personagem...")
         spinnerItems.addAll(characters.map { character ->
             if (character.name.isNotEmpty()) {
-                character.name
+                character.id
             } else {
-                "Personagem sem nome"
+                "Personagem não encontrado"
             }
         })
 
@@ -105,12 +104,9 @@ class SearchCharacterActivity : AppCompatActivity() {
             Toast.makeText(this, "Selecione um personagem da lista", Toast.LENGTH_SHORT).show()
             return
         }
-
-        // Pega o personagem selecionado (posição - 1 por causa do "Selecione...")
         val selectedCharacter = characters[selectedPosition - 1]
         val characterId = selectedCharacter.id
 
-        // Faz a busca por ID
         searchCharacterById(characterId)
     }
 
@@ -148,14 +144,11 @@ class SearchCharacterActivity : AppCompatActivity() {
             Nome: ${character.name}
             Espécie: ${character.species}
             Casa: ${character.house}
-            
-            ID utilizado: ${character.id}
         """.trimIndent()
 
         tvResult.text = result
         tvResult.visibility = View.VISIBLE
 
-        // Exibe a foto se disponível
         if (character.image.isNotEmpty()) {
             Picasso.get()
                 .load(character.image)

@@ -73,7 +73,6 @@ class SpellsActivity : AppCompatActivity() {
 
             } catch (e: Exception) {
                 progressBar.visibility = View.GONE
-                // Handle error
             }
         }
     }

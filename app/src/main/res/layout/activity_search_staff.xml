@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -30,7 +31,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Buscar Professores"
-        android:onClick="searchStaff" />
+        android:onClick="searchStaff"
+        app:backgroundTint="#0E1A40"/>
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -60,6 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Voltar"
-        android:onClick="goBack"/>
+        android:onClick="goBack"
+        app:backgroundTint="#2A623D"/>
 
 </LinearLayout>

@@ -11,7 +11,6 @@ class SpellDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spell_detail)
 
-        // Configurar ActionBar para mostrar botão de voltar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Detalhes do Feitiço"
 

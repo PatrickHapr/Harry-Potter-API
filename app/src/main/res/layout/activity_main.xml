@@ -1,64 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#f5f5f5"
     android:gravity="center"
-    android:padding="24dp"
-    android:background="#f5f5f5">
+    android:orientation="vertical"
+    android:outlineAmbientShadowColor="#BF0B0B"
+    android:outlineSpotShadowColor="#D10F0F"
+    android:padding="24dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:letterSpacing="0.1"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
         android:text="Hogwarts Info"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:textColor="#2c3e50"
-        android:layout_marginBottom="40dp" />
+        android:textColor="#8B4513"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
 
     <Button
         android:id="@+id/btnSearchCharacter"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Buscar Personagem por ID"
+        android:layout_height="60dp"
+        android:text="🧙‍♂️ Buscar Personagem por ID"
         android:textSize="16sp"
-        android:layout_margin="8dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        app:backgroundTint="#7F0909"
+        android:layout_margin="12dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:elevation="8dp"
         android:onClick="searchCharacterById" />
 
     <Button
         android:id="@+id/btnSearchStaff"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Listar Professores"
+        android:layout_height="60dp"
+        android:text="👨‍🏫 Listar Professores"
         android:textSize="16sp"
-        android:layout_margin="8dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        app:backgroundTint="#0E1A40"
+        android:layout_margin="12dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:elevation="8dp"
         android:onClick="searchStaff" />
 
     <Button
         android:id="@+id/btnSearchStudents"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Estudantes por Casa"
+        android:layout_height="60dp"
+        android:layout_margin="12dp"
+        android:elevation="8dp"
+        android:fontFamily="serif"
+        android:onClick="searchStudentsByHouse"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="🏠 Estudantes por Casa"
+        android:textColor="#FAF7F7"
         android:textSize="16sp"
-        android:layout_margin="8dp"
-        android:onClick="searchStudentsByHouse" />
+        android:textStyle="bold"
+        app:backgroundTint="#FFDB00" />
 
     <Button
         android:id="@+id/btnViewSpells"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ver Feitiços"
+        android:layout_height="60dp"
+        android:layout_margin="12dp"
+        android:elevation="8dp"
+        android:fontFamily="serif"
+        android:onClick="viewSpells"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="✨ Ver Feitiços"
+        android:textColor="#F8F8F8"
         android:textSize="16sp"
-        android:layout_margin="8dp"
-        android:onClick="viewSpells" />
+        android:textStyle="bold"
+        app:backgroundTint="#B3A128" />
 
     <Button
         android:id="@+id/btnExit"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sair"
+        android:layout_height="60dp"
+        android:layout_margin="12dp"
+        app:backgroundTint="#2A623D"
+        android:elevation="8dp"
+        android:fontFamily="serif"
+        android:onClick="exitApp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="🚪 Sair"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
-        android:layout_margin="8dp"
-        android:onClick="exitApp" />
-
+        android:textStyle="bold" />
 </LinearLayout>
